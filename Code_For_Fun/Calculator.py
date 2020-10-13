@@ -47,9 +47,9 @@ else:
                 sum = m + p + c
                 avg = sum / 3
                 if m >= 50 and p >= 50 and c >= 50:
-                    print(f"You have passed in all your exams. Your total and average marks are {sum} and {avg}.")
+                    print(f"You have passed in all your exams. Your total and average marks are {sum} and {avg:.3f}.")
                 else:
-                    print(f"You have failed in your exams. Your total and average marks are {sum} and {avg}.")
+                    print(f"You have failed in your exams. Your total and average marks are {sum} and {avg:.3f}.")
                 break
             except ValueError:
                 print("Please enter integer values only!!")
