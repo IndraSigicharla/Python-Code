@@ -1,4 +1,3 @@
-o = "You have {} attempt(s) remaining."
 begin = input("Subject Marks Calculator. Press Enter to start or 'exit' to quit. ").lower()
 if begin == "exit":
     exit("You quit the calculator.")
@@ -12,7 +11,7 @@ else:
                 else:
                     i = 2
                     while i:
-                        print(o.format(i))
+                        print(f"You have {i} attempt(s) remaining.")
                         m = float(input("Enter the VALID marks obtained in Maths: "))
                         i -= 1
                         if 0 <= m <= 100:
@@ -25,7 +24,7 @@ else:
                 else:
                     i = 2
                     while i:
-                        print(o.format(i))
+                        print(f"You have {i} attempt(s) remaining.")
                         p = float(input("Enter the VALID marks obtained in Physics: "))
                         i -= 1
                         if 0 <= p <= 100:
@@ -38,7 +37,7 @@ else:
                 else:
                     i = 2
                     while i:
-                        print(o.format(i))
+                        print(f"You have {i} attempt(s) remaining.")
                         c = float(input("Enter the VALID marks obtained in Chemistry: "))
                         i -= 1
                         if 0 <= c <= 100:
@@ -48,9 +47,9 @@ else:
                 sum = m + p + c
                 avg = sum / 3
                 if m >= 50 and p >= 50 and c >= 50:
-                    print("You have passed in all your exams. Your total and average marks are " + str(sum) + " and " + str(avg) + ".")
+                    print(f"You have passed in all your exams. Your total and average marks are {sum} and {avg}.")
                 else:
-                    print("You have failed in your exams. Your total and average marks are " + str(sum) + " and " + str(avg) + ".")
+                    print(f"You have failed in your exams. Your total and average marks are {sum} and {avg}.")
                 break
             except ValueError:
                 print("Please enter integer values only!!")
