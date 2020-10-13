@@ -1,3 +1,8 @@
+"""[Retrieve and print words from a URL.]
+
+    Usage:
+        [python words.py <URL>]
+"""
 import sys
 from urllib.request import urlopen
 
