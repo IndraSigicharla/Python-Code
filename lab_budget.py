@@ -1,0 +1,10 @@
+comp_c = float(input("Enter the cost of one computer: "))
+comp_n = int(input("Enter the number of computers for the lab: "))
+tab_c = float(input("Enter the cost of one table: "))
+tab_n = int(input("Enter the number of tables required: "))
+cha_c = float(input("Enter the cost of one chair: "))
+cha_n = int(input("Enter the number of chairs required: "))
+wag_h = float(input("Enter the wages for one hour: "))
+wag_n = int(input("Enter the number of hours of work to complete the lab:"))
+budget = comp_c*comp_n + tab_c*tab_n + cha_c*cha_n + wag_h*wag_n
+print("The budget required for the lab is :", budget)
