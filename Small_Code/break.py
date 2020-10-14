@@ -4,7 +4,7 @@ while True:
     s += m
     if m % 5 == 0:
         print("You've broken out of the loop!")
-        print("Sum =", s)
-        print("The number which broke you out of the loop is", m)
+        print(f"Sum = {s}")
+        print(f"The number which broke you out of the loop is {m}.")
         break
     else: continue
