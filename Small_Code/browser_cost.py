@@ -9,4 +9,4 @@ elif h < 5:
     amt = h*50 + m
 elif h == 7 and m == 0:
     amt = 300
-print("The cost of browsing the web is:", amt)
+print(f"The cost of browsing the web is: {amt}")
