@@ -6,7 +6,7 @@ else:
         for x in range(times):
             try:
                 m = float(input("Enter the marks obtained in Maths: "))
-                if 0 <= m <= 100:
+                if m in range(101):
                     pass
                 else:
                     i = 2
@@ -14,12 +14,12 @@ else:
                         print(f"You have {i} attempt(s) remaining.")
                         m = float(input("Enter the VALID marks obtained in Maths: "))
                         i -= 1
-                        if 0 <= m <= 100:
+                        if m in range(101):
                             break
                         elif i == 0:
                             exit("You've used up all of your remaining attempts!")
                 p = float(input("Enter the marks obtained in Physics: "))
-                if 0 <= p <= 100:
+                if p in range(101):
                     pass
                 else:
                     i = 2
@@ -27,12 +27,12 @@ else:
                         print(f"You have {i} attempt(s) remaining.")
                         p = float(input("Enter the VALID marks obtained in Physics: "))
                         i -= 1
-                        if 0 <= p <= 100:
+                        if p in range(101):
                             break
                         elif i == 0:
                             exit("You've used up all of your remaining attempts!")
                 c = float(input("Enter the marks obtained in Chemistry: "))
-                if 0 <= c <= 100:
+                if c in range(101):
                     pass
                 else:
                     i = 2
@@ -40,13 +40,13 @@ else:
                         print(f"You have {i} attempt(s) remaining.")
                         c = float(input("Enter the VALID marks obtained in Chemistry: "))
                         i -= 1
-                        if 0 <= c <= 100:
+                        if c in range(101):
                             break
                         elif i == 0:
                             exit("You've used up all of your remaining attempts!")
                 sum = m + p + c
                 avg = sum / 3
-                if m >= 50 and p >= 50 and c >= 50:
+                if m and p and c not in range(50):
                     print(f"You have passed in all your exams. Your total and average marks are {sum} and {avg:.3f}.")
                 else:
                     print(f"You have failed in your exams. Your total and average marks are {sum} and {avg:.3f}.")
