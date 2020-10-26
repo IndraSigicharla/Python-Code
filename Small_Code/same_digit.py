@@ -1,8 +1,8 @@
 n1 = input()[::-1]
 n2 = input()[::-1]
 y = 1
-for i in range(len(n1)):
-    if n1[i] == n2[i]:
+for i, idx in enumerate(n1):
+    if idx == n2[i]:
         if i == 0:
             print("Same at 1's position")
             y = 0
