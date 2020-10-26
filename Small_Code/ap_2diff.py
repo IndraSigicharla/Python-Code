@@ -1,7 +1,7 @@
 from itertools import accumulate
-a = 97
-b = 100
-c = 98
+a = int(input())
+b = int(input())
+c = int(input())
 n = int(input())
 d1 = b - a
 d2 = c - b
