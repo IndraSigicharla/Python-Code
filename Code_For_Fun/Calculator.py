@@ -3,12 +3,10 @@ if begin == "exit":
     exit("You quit the calculator.")
 else:
     def main(times=3):
-        for x in range(times):
+        for _ in range(times):
             try:
                 m = float(input("Enter the marks obtained in Maths: "))
-                if m in range(101):
-                    pass
-                else:
+                if m not in range(101):
                     i = 2
                     while i:
                         print(f"You have {i} attempt(s) remaining.")
@@ -19,9 +17,7 @@ else:
                         elif i == 0:
                             exit("You've used up all of your remaining attempts!")
                 p = float(input("Enter the marks obtained in Physics: "))
-                if p in range(101):
-                    pass
-                else:
+                if p not in range(101):
                     i = 2
                     while i:
                         print(f"You have {i} attempt(s) remaining.")
@@ -32,9 +28,7 @@ else:
                         elif i == 0:
                             exit("You've used up all of your remaining attempts!")
                 c = float(input("Enter the marks obtained in Chemistry: "))
-                if c in range(101):
-                    pass
-                else:
+                if c not in range(101):
                     i = 2
                     while i:
                         print(f"You have {i} attempt(s) remaining.")
@@ -53,8 +47,6 @@ else:
                 break
             except ValueError:
                 print("Please enter integer values only!!")
-                pass
-
         end = input("Press Enter to quit or 'restart' to restart the calculator :").lower()
         if end == "restart":
             main()
