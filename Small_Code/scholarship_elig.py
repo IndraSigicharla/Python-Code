@@ -1,7 +1,5 @@
 begin = input("Are you a first graduate? (Yes/No)").lower()
-if begin == "yes":
-    pass
-else:
+if begin != "yes":
     exit("This scholarship is only for first graduates.")
 def main():
     try:

@@ -1,6 +1,6 @@
 r_no, name, s1, s2, s3, s4, total, avg = ([] for i in range(8))
 n = int(input("Enter the number of students: "))
-for x in range(n):
+for _ in range(n):
     reg_no = input()
     s_name = input()
     sub_1 = int(input())

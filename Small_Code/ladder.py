@@ -1,8 +1,4 @@
-count = 1
-while count <= 6:
-    c = 1
-    while c <= count:
+for count in range(1, 7):
+    for _ in range(1, count + 1):
         print(end="#")
-        c += 1
     print("\r")
-    count += 1

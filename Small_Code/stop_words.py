@@ -3,14 +3,9 @@ stop_words = ['began', 'go', 'small', 'somebody', 'long', 'smaller', 'kind', 'kn
 prep = ['aboard', 'about', 'above', 'across', 'after', 'against', 'along', 'amid', 'among', 'anti', 'around', 'as', 'at', 'before', 'behind', 'below', 'beneath', 'beside', 'besides', 'between', 'beyond', 'but', 'by', 'concerning', 'considering', 'despite', 'down', 'during', 'except', 'excepting', 'excluding', 'following', 'for',
         'from', 'in', 'inside', 'into', 'like', 'minus', 'near', 'of', 'off', 'on', 'onto', 'opposite', 'outside', 'over', 'past', 'per', 'plus', 'regarding', 'round', 'save', 'since', 'than', 'through', 'to', 'toward', 'towards', 'under', 'underneath', 'unlike', 'until', 'up', 'upon', 'versus', 'via', 'with', 'within', 'without', ]
 a = input("Enter a sentence: ").lower().split()
-b, c = (list() for i in range(2))
-for x in a:
-    if x in stop_words:
-        b.append(x)
+b = [x for x in a if x in stop_words]
 print(f"The list of stop-words in the input is: {b}")
 print(f"The number of prepositions in the input are: {len(b)}")
-for x in a:
-    if x in prep:
-        c.append(x)
-print(f"The list of prepositions in the input is: {c}")
+c = [x for x in a if x in prep]
+print(f"The list of prepositions in the input is: {list(set(c))}")
 print(f"The number of prepositions in the input are: {len(c)}")

@@ -1,8 +1,7 @@
 # Code to remove consecutive duplicate numbers from input:
+# List-comprehension for taking user inputs and creating a list:
 
-a = []
-for x in range(int(input())):
-    a.append(int(input()))
+a = [int(input()) for _ in range(int(input()))]
 for i, x in enumerate(a):
     if a[i - 1] == a[i]:
         a.pop(i)

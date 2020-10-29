@@ -6,7 +6,5 @@ while n:
     sum += m
     if n == 0:
         break
-    else:
-        pass
 avg = sum / p
 print(avg)

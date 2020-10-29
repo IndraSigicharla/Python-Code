@@ -35,12 +35,10 @@ class Guess:
                 print("Guess a Lower number please")
             self.guess_count += 1
             self.guess = int(input("Enter a random number between 1 and 100:\n"))
-            if self.guess_count == 5 and self.guess is not self.random:
-                self.x = False
+            if self.guess_count == 5:
+                if self.guess is not self.random:
+                    self.x = False
                 break
-            elif self.guess_count == 5:
-                break
-
         if self.x:
             print("Congratulations,You have won!You guessed the right number {} in {} tries".format(self.random,
                                                                                                     self.guess_count))

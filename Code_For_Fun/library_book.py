@@ -1,6 +1,6 @@
 book_id, book_name, author, publisher, y_o_p, cost, no_pages, no_copies = ([] for i in range(8))
 n = int(input("Enter the number of books: "))
-for x in range(n):
+for _ in range(n):
     b_id = int(input("Enter the Book ID: "))
     name = input("Enter the name of the book: ")
     auth = input("Enter the name of the author of the book: ")
@@ -25,4 +25,4 @@ for x in range(n):
         print(book_id[x], book_name[x], author[x], publisher[x], y_o_p[x],cost[x] ,no_pages[x], no_copies[x], sep='\n')
         token = 0
 if token:
-    print("The ID you entered does not exist within our registry.")      
+    print("The ID you entered does not exist within our registry.")
