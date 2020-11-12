@@ -1,4 +1,4 @@
-tic = [list(map(str, input().split())) for _ in range(3)]
+tic = [input().split() for _ in range(3)]
 if tic[0][0] == 'X' and tic[1][1] == 'X' and tic[2][2] == 'X':
     print("X is the winner!")
     exit()
