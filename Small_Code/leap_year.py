@@ -1,6 +1,5 @@
 a = int(input("Enter the year: "))
-b = "The year {} is a leap year."
 if a % 4 == 0:
-    print(b.format(a))
+    print(f"The year {a} is a leap year.")
 else:
     print("This year is not a leap year.")
