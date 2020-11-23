@@ -11,10 +11,8 @@ for _ in range(number):
     b.append(input())
     c.append(int(input()))
     d.append(int(input()))
-e = d[::]
-sorter(d)
-for i, j in enumerate(sorter(d)):
-    print(b[e.index(j)])
+e = [x for _, x in sorter(list(zip(d, b)))]
+print(*e, sep = "\n")
 # 3
 # 1234
 # marg
