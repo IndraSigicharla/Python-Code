@@ -4,7 +4,7 @@ amt = 0
 if h >= 7 and m > 0:
     exit("Invalid Entry")
 elif h >= 5:
-    amt += 200 + (h-5) + m
+    amt += 200 + (h-5)*50 + m
 else:
     amt = h*50 + m
 print(f"The cost of browsing the web is: {amt}")
