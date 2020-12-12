@@ -2,8 +2,8 @@ begin = input("Subject Marks Calculator. Press Enter to start or 'exit' to quit.
 if begin == "exit":
     exit("You quit the calculator.")
 else:
-    def main(times=3):
-        for _ in range(times):
+    def main():
+        for _ in range(3):
             try:
                 m = float(input("Enter the marks obtained in Maths: "))
                 if m not in range(101):
