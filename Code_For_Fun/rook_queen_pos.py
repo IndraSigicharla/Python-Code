@@ -21,7 +21,7 @@ move_set_queen.extend(diag)
 common = list(set(move_set_queen).intersection(set(move_set_rook)))
 if (rr, rc) in common:
     common.remove((rr, rc))
-elif (qr, qc) in common:
+if (qr, qc) in common:
     common.remove((qr, qc))
 for i in sorted(common):
     print(i)
