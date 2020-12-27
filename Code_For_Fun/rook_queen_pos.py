@@ -1,22 +1,22 @@
-from itertools import *
-a = [i for i in range(1, 9)]
-ALL = list(product(a, a))
-diag = []
+a = list(range(1, 9))
 rr = int(input())
 rc = int(input())
 qr = int(input())
 qc = int(input())
+def cartesian(*args, **kwargs):
+    targets = list(map(tuple, args)) * kwargs.get('re', 1)
+    result = [[]]
+    for target in targets:
+        result = [x + [y] for x in result for y in target]
+    for prod in result:
+        yield tuple(prod)
 def moveLine(x, y):
-    c1 = set(product([x], a))
-    c2 = set(product(a, [y]))
+    c1 = set(cartesian([x], a))
+    c2 = set(cartesian(a, [y]))
     return list(c1.union(c2))
-def Diag(lst):
-    for x, y in lst:
-        if y - x == qc - qr or y + x == qr + qc:
-            diag.append((x, y))
+diag = [(x, y) for x, y in list(cartesian(a, a)) if y - x == qc - qr or y + x == qr + qc]
 move_set_rook = moveLine(rr, rc)
 move_set_queen = moveLine(qr, qc)
-Diag(ALL)
 move_set_queen.extend(diag)
 common = list(set(move_set_queen).intersection(set(move_set_rook)))
 if (rr, rc) in common:
