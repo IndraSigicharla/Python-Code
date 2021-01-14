@@ -3,9 +3,8 @@ import re
 x = input().lower()
 check = re.search("^[a-z]*$", x)
 if check:
-    a = [i for i in x]
     d = {}
-    for i in a:
+    for i in x:
         if i in d:
             d[i] += 1
         else:
